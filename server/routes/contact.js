@@ -6,7 +6,7 @@ let jwt = require('jsonwebtoken');
 
 let passport = require('passport');
 
-let bookController = require('../controllers/contact');
+let contactController = require('../controllers/contact');
 
 // helper function for guard purposes
 function requireAuth(req, res, next)
@@ -19,8 +19,8 @@ function requireAuth(req, res, next)
     next();
 }
 
-/* GET Route for the Book List page - READ Operation */
-router.get('/', contactController.displayBookList);
+/* GET Route for the contact List page - READ Operation */
+router.get('/', contactController.displayContactList);
 
 /* GET Route for displaying the Add page - CREATE Operation */
 router.get('/add', requireAuth, contactController.displayAddPage);
